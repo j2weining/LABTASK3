@@ -24,7 +24,6 @@ function submit() {
         document.getElementById("inameDis").innerHTML = itemname1;
         document.getElementById("priceDis").innerHTML = "RM " + (price1.toFixed(2));
         document.getElementById("quantityDis").innerHTML = quantity1;
-
         document.getElementById("iname2Dis").innerHTML = itemname2;
         document.getElementById("price2Dis").innerHTML = "RM " + (price2.toFixed(2));
         document.getElementById("quantity2Dis").innerHTML = quantity2;
