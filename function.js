@@ -49,7 +49,7 @@ function submit() {
         if (IsMember.checked) {
             var discount = grandtotal * (5 / 100);
             document.getElementById("discount").innerHTML = "RM " + (discount.toFixed(2));
-            var fprice = grandtotal * (95 / 100);
+            var fprice = grandtotal - discount;
             document.getElementById("finalprice").innerHTML = "RM " + (fprice.toFixed(2));
         }
         else {
