@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Sales Info</title>
 </head>
-<body>
-    <form method="POST" action="output.html">
-        <table border="1">
+<body id="background">
+    <div id="form1">
+    <form method="POST" action="sales.html">
+        <table border="1" id="table" cellpadding="6" cellspacing="0">
             <tr>
-                <td colspan="2">
+                <td colspan="2" id="title">
                     Sales Info
                 </td>
             </tr>
@@ -20,11 +22,11 @@
             </tr>
             <tr>
                 <td><label>Membership Card</label></td>
-                <td><label><input type="radio" name="member" value="yes" >Yes</label>
-                    <label><input type="radio" name="member" value="no" >No</label></td>
+                <td><label><input type="radio" id="IsMember" value="Yes" >Yes</label>
+                    <label><input type="radio" id="NotMember" value="No" >No</label></td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td colspan="2" id="title">
                     ITEM 1
                 </td>
             </tr>
@@ -41,7 +43,7 @@
                 <td><input type="number" id="quantity" required></td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td colspan="2" id="title">
                     ITEM 2
                 </td>
             </tr>
@@ -59,11 +61,97 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <button type="submit" onclick="calmessage()">Calculate</button> <input type="reset" value="Reset">
+                    <button type="button" onclick="calmessage()" id="calculate">Calculate</button> <input type="reset" value="Reset" id="reset">
                 </td>
             </tr>
         </table>
     </form>
+</div>
+
+<div id="form2">
+    <form method="GET" action="sales.html">
+        <table border="1" id="table" cellpadding="6" cellspacing="0">
+            <tr>
+                <td colspan="2" id="title">
+                    Sales Info
+                </td>
+            </tr>
+            <tr>
+                <td><label for="displayName">Customer Name</label></td>
+                <td><div id="displayName"></div></td>
+            </tr>
+            <tr>
+                <td><label>Membership Card</label></td>
+                <td><div id="memberDis"></div></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="title">
+                    ITEM 1
+                </td>
+            </tr>
+            <tr>
+                <td><label for="inameDis">Name</label></td>
+                <td><div id="inameDis"></div></td>
+            </tr>
+            <tr>
+                <td><label for="priceDis">Unit Price (RM)</label></td>
+                <td><div id="priceDis"></div></td>
+            </tr>
+            <tr>
+                <td><label for="quantityDis">Quantity</label></td>
+                <td><div id="quantityDis"></div></td>
+            </tr>
+            <tr>
+                <td><label for="totalprice">Total Price</label></td>
+                <td><div id="totalprice"></div></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="title">
+                    ITEM 2
+                </td>
+            </tr>
+            <tr>
+                <td><label for="iname2Dis">Name</label></td>
+                <td><div id="iname2Dis"></div></td>
+            </tr>
+            <tr>
+                <td><label for="price2Dis">Unit Price (RM)</label></td>
+                <td><div id="price2Dis"></div></td>
+            </tr>
+            <tr>
+                <td><label for="quantity2Dis">Quantity</label></td>
+                <td><div id="quantity2Dis"></div></td>
+            </tr>
+            <tr>
+                <td><label for="totalprice2">Total Price</label></td>
+                <td><div id="totalprice2"></div></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" id="title">
+                    PAYMENT INFO
+                </td>
+            </tr>
+            <tr>
+                <td><label for="grand">Grand Total</label></td>
+                <td><div id="grand"></div></td>
+            </tr>
+            <tr>
+                <td><label for="discount">Discount</label></td>
+                <td><div id="discount"></div></td>
+            </tr>
+            <tr>
+                <td><label for="finalprice">Final Price</label></td>
+                <td><div id="finalprice"></div></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Back" id="back">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
     <script src="function.js"></script>
-</body>
+    </body>
 </html>
