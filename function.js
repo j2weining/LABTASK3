@@ -67,7 +67,7 @@ function submit(){
 	}
 	else
 	{
-		alert("Incomplete Form!!");
+		alert("Please fill in all fields !");
         document.getElementById('form2').hidden = true;
         location.reload();
 	}
